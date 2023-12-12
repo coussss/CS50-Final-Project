@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Template</h1>
+    <form action="/generate" method="post">
+        <select name="dealer-card">
+            <option disabled selected value>Dealer Card</option>
+            {% for row in cards_dict %}
+                <option value = "{{ row }}">{{ row }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    <p>{{ cards_dict }}</p>
 </body>
 </html>
