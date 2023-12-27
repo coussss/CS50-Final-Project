@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackjack Basic Strategyt</title>
+    <title>Blackjack Basic Strategy</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
@@ -14,6 +14,19 @@
                 <option value = "{{ row }}">{{ row }}</option>
             {% endfor %}
         </select>
+        <select name="player-card-1">
+            <option disabled selected value>Player Card</option>
+            {% for row in cards_dict %}
+                <option value = "{{ row }}">{{ row }}</option>
+            {% endfor %}
+        </select>
+        <select name="player-card-2">
+            <option disabled selected value>Player Card</option>
+            {% for row in cards_dict %}
+                <option value = "{{ row }}">{{ row }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" name="submit">
     </form>
     <p>{{ cards_dict }}</p>
 </body>

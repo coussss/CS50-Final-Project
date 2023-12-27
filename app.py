@@ -16,4 +16,4 @@ def home():
             cards_dict.append(card)
 
     
-    return render_template("index.html", cards_dict = cards_dict)
+    return render_template("index.html", cards_dict = rows[(9-1)][(3-1)])
