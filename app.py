@@ -11,12 +11,12 @@ def home():
 
         cards_dict=[]
 
-        for i in range(11):
+        for i in range(1, 11):
             card = rows[0][i]
             cards_dict.append(card)
 
     
-    return render_template("index.html", cards_dict = cards_dict, test = rows[(9-1)][(3-1)])
+    return render_template("index.html", cards_dict = cards_dict)
 
 @app.route("/generate", methods=["GET", "POST"])
 def generate():
@@ -27,13 +27,20 @@ def generate():
 
         cards_dict=[]
 
-        for i in range(11):
+        for i in range(1, 11):
             card = rows[0][i]
             cards_dict.append(card)
 
     dealer_card = request.form.get("dealer-card")
     player_card_1 = request.form.get("player-card-1")
     player_card_2 = request.form.get("player-card-2")
+
+    if dealer_card == "A":
+        dealer_card = 11
+    if player_card_1 == "A":
+        player_card_1 = 11
+    if player_card_2 == "A":
+        player_card_2 = 11
 
     dealer = int(dealer_card)
     player = int(player_card_1) + int(player_card_2)
