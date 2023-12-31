@@ -21,29 +21,52 @@
                 <p>Simply enter the dealer's card and your starting cards to decide your next move</p>
             </div>
             <div class="calculator-container">
-                <div class="dealer-container">
-                    <div class="dealer-title">
+                <div class="card-list">
+                    <div class="card-option" value="2" onclick="cardSelect()">2</div>
+                    <div class="card-option" value="3" onclick="cardSelect()">3</div>
+                    <div class="card-option" value="4" onclick="cardSelect()">4</div>
+                    <div class="card-option" value="5" onclick="cardSelect()">5</div>
+                    <div class="card-option" value="6" onclick="cardSelect()">6</div>
+                    <div class="card-option" value="7" onclick="cardSelect()">7</div>
+                    <div class="card-option" value="8" onclick="cardSelect()">8</div>
+                    <div class="card-option" value="9" onclick="cardSelect()">9</div>
+                    <div class="card-option" value="10" onclick="cardSelect()">10</div>
+                    <div class="card-option" value="10" onclick="cardSelect()">J</div>
+                    <div class="card-option" value="10" onclick="cardSelect()">Q</div>
+                    <div class="card-option" value="10" onclick="cardSelect()">K</div>
+                    <div class="card-option" value="11" onclick="cardSelect()">A</div>
+                </div>
+                <div class="play-container dealer-container">
+                    <div class="title dealer-title">
                         <p>Dealer</p>
                     </div>
-                    <div class="dealer-cards">
-                        <div class="dealer-dropdown">
-                            <button class="button">[+]</button>
-                            <div class="cards">
-                                <a href="">2</a>
-                                <a href="">3</a>
-                                <a href="">4</a>
-                                <a href="">5</a>
-                                <a href="">6</a>
+                    <div class="cards dealer-cards">
+                        <div class="dropdown dealer-dropdown">
+                            <div class="button" onclick="showCards(event)">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFFFFF" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208Zm-32-80a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path></svg>
                             </div>
-                        </div>
-                        <div class="dealer-card-2">
-                            
                         </div>
                     </div>
                 </div>
-            </div>
-                <div class="calculator">
-                    
+                <div class="table-line">
+
+                </div>
+                <div class="play-container player-container">
+                    <div class="title player-title">
+                        <p>Player</p>
+                    </div>
+                    <div class="cards">
+                        <div class="dropdown player-dropdown">
+                            <div class="button" onclick="showCards(event)">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFFFFF" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208Zm-32-80a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="dropdown player-dropdown">
+                            <div class="button" onclick="showCards(event)">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFFFFF" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208Zm-32-80a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
