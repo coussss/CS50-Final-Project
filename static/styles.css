@@ -34,10 +34,9 @@ body{
 
 .bottom-display{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 40%;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .display-box{
@@ -45,6 +44,7 @@ body{
     width: 200px;
     height: 100px;
     text-align: center;
+    margin: 25px;
 }
 
 /*card dropdown*/
