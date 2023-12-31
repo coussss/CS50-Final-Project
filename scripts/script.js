@@ -51,7 +51,27 @@ const strategies = {
 }
 
 function calculateChoice(d1, p1, p2) {
-    console.log(strategies[`hard${p1 + p2}`][d1-1]);
+    if (p1 == p2){
+        return(strategies[`split${p1}`][d1 - 2])
+    } else if (p1 == 11 || p2 == 11) {
+        if (p1 + p2 > 20) {
+            return(1)
+        } else {
+            return(strategies[`soft${p1 + p2}`][d1 - 2])
+        }
+    } else {
+        if (p1 + p2 > 17) {
+            return(1)
+        } else if (p1 + p2 < 8) {
+            return(0)
+        } else {
+            return(strategies[`hard${p1 + p2}`][d1 - 2])
+        }
+    }
+}
+
+function displayChoice(choice) {
+    
 }
 
 function showCards(event) { 
@@ -61,7 +81,7 @@ function showCards(event) {
     let posX = event.clientX;
     let posY = event.clientY;
 
-    if(card_select.style.display == 'none') {
+    if (card_select.style.display == 'none') {
         card_select.style.left = `${posX}px`;
         card_select.style.top = `${posY}px`;
         card_select.style.display = 'flex';
@@ -81,7 +101,7 @@ function cardSelect(val) {
     let plus_image = currentSelect.querySelector('.plus-image');
     let card_text = currentSelect.querySelector('.cardText');
 
-    if(window.getComputedStyle(plus_image).getPropertyValue("display") == 'block') {
+    if (window.getComputedStyle(plus_image).getPropertyValue("display") == 'block') {
         cardCount++;
     }
 
@@ -92,12 +112,16 @@ function cardSelect(val) {
 
     card_select.style.display = 'none';
 
-    if(cardCount == 3) {
+    if (cardCount == 3) {
         cards = document.querySelectorAll('.cardText');
         dealer_card_1 = Number(cards[0].value);
         player_card_1 = Number(cards[1].value);
         player_card_2 = Number(cards[2].value);
 
-        calculateChoice(dealer_card_1, player_card_1, player_card_2);
+        let choice = calculateChoice(dealer_card_1, player_card_1, player_card_2);
+
+        console.log(choice)
+
+        displayChoice(choice)
     }
 }

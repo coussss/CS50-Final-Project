@@ -21,10 +21,30 @@ body{
 }
 
 .calculator-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     background-color: rgb(34, 119, 34);
     padding-bottom: 20px;
     outline: 2px solid rgb(25, 70, 25);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.bottom-display{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 40%;
+    margin-top: 50px;
+}
+
+.display-box{
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    text-align: center;
 }
 
 /*card dropdown*/
@@ -35,8 +55,8 @@ body{
     background-color: rgba(51, 51, 51, 90%);
     display: none;
     flex-wrap: wrap;
-    max-width: 660px;
     padding: 5px;
+    margin-right: 20px;
     border-radius: 5px;
 }
 

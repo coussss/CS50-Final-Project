@@ -20,60 +20,70 @@
                 <h3>Use this simple calculator to get an edge over the house</h3>
                 <p>Simply enter the dealer's card and your starting cards to decide your next move</p>
             </div>
-            <div class="calculator-container">
-                <div class="card-list">
-                    <option class="card-option" value="2" onclick="cardSelect(this)">2</option>
-                    <option class="card-option" value="3" onclick="cardSelect(this)">3</option>
-                    <option class="card-option" value="4" onclick="cardSelect(this)">4</option>
-                    <option class="card-option" value="5" onclick="cardSelect(this)">5</option>
-                    <option class="card-option" value="6" onclick="cardSelect(this)">6</option>
-                    <option class="card-option" value="7" onclick="cardSelect(this)">7</option>
-                    <option class="card-option" value="8" onclick="cardSelect(this)">8</option>
-                    <option class="card-option" value="9" onclick="cardSelect(this)">9</option>
-                    <option class="card-option" value="10" onclick="cardSelect(this)">10</option>
-                    <option class="card-option" value="10" onclick="cardSelect(this)">J</option>
-                    <option class="card-option" value="10" onclick="cardSelect(this)">Q</option>
-                    <option class="card-option" value="10" onclick="cardSelect(this)">K</option>
-                    <option class="card-option" value="11" onclick="cardSelect(this)">A</option>
-                </div>
-                <div class="play-container dealer-container">
-                    <div class="title dealer-title">
-                        <p>Dealer</p>
+            <div class="display-container">
+                <div class="calculator-container">
+                    <div class="card-list">
+                        <option class="card-option" value="2" onclick="cardSelect(this)">2</option>
+                        <option class="card-option" value="3" onclick="cardSelect(this)">3</option>
+                        <option class="card-option" value="4" onclick="cardSelect(this)">4</option>
+                        <option class="card-option" value="5" onclick="cardSelect(this)">5</option>
+                        <option class="card-option" value="6" onclick="cardSelect(this)">6</option>
+                        <option class="card-option" value="7" onclick="cardSelect(this)">7</option>
+                        <option class="card-option" value="8" onclick="cardSelect(this)">8</option>
+                        <option class="card-option" value="9" onclick="cardSelect(this)">9</option>
+                        <option class="card-option" value="10" onclick="cardSelect(this)">10</option>
+                        <option class="card-option" value="10" onclick="cardSelect(this)">J</option>
+                        <option class="card-option" value="10" onclick="cardSelect(this)">Q</option>
+                        <option class="card-option" value="10" onclick="cardSelect(this)">K</option>
+                        <option class="card-option" value="11" onclick="cardSelect(this)">A</option>
                     </div>
-                    <div class="cards dealer-cards">
-                        <div class="dropdown dealer-dropdown">
-                            <div class="button dealer-1" onclick="showCards(event)">
-                                <option class="cardText">
+                    <div class="play-container dealer-container">
+                        <div class="title dealer-title">
+                            <p>Dealer</p>
+                        </div>
+                        <div class="cards dealer-cards">
+                            <div class="dropdown dealer-dropdown">
+                                <div class="button dealer-1" onclick="showCards(event)">
+                                    <option class="cardText">
 
-                                </option>
-                                <img class="plus-image" src="../assets/plus-symbol.png" display="block" width="30px" height="30px">
+                                    </option>
+                                    <img class="plus-image" src="../assets/plus-symbol.png" display="block" width="30px" height="30px">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="table-line">
+                    <div class="table-line">
 
-                </div>
-                <div class="play-container player-container">
-                    <div class="title player-title">
-                        <p>Player</p>
                     </div>
-                    <div class="cards">
-                        <div class="dropdown player-dropdown">
-                            <div class="button player-1" onclick="showCards(event)">
-                                <option class="cardText">
+                    <div class="play-container player-container">
+                        <div class="title player-title">
+                            <p>Player</p>
+                        </div>
+                        <div class="cards">
+                            <div class="dropdown player-dropdown">
+                                <div class="button player-1" onclick="showCards(event)">
+                                    <option class="cardText">
 
-                                </option>
-                                <img class="plus-image" src="../assets/plus-symbol.png" width="30px" height="30px">
+                                    </option>
+                                    <img class="plus-image" src="../assets/plus-symbol.png" width="30px" height="30px">
+                                </div>
+                            </div>
+                            <div class="dropdown player-dropdown">
+                                <div class="button player-2" onclick="showCards(event)">
+                                    <option class="cardText">
+
+                                    </option>
+                                    <img class="plus-image" src="../assets/plus-symbol.png" width="30px" height="30px">
+                                </div>
                             </div>
                         </div>
-                        <div class="dropdown player-dropdown">
-                            <div class="button player-2" onclick="showCards(event)">
-                                <option class="cardText">
-
-                                </option>
-                                <img class="plus-image" src="../assets/plus-symbol.png" width="30px" height="30px">
-                            </div>
+                    </div>
+                    <div class="bottom-display">
+                        <div class="player-hand-display display-box">
+                            Hand
+                        </div>
+                        <div class="player-choice-display display-box">
+                            Stand
                         </div>
                     </div>
                 </div>
