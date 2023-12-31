@@ -22,19 +22,19 @@
             </div>
             <div class="calculator-container">
                 <div class="card-list">
-                    <div class="card-option" value="2" onclick="cardSelect()">2</div>
-                    <div class="card-option" value="3" onclick="cardSelect()">3</div>
-                    <div class="card-option" value="4" onclick="cardSelect()">4</div>
-                    <div class="card-option" value="5" onclick="cardSelect()">5</div>
-                    <div class="card-option" value="6" onclick="cardSelect()">6</div>
-                    <div class="card-option" value="7" onclick="cardSelect()">7</div>
-                    <div class="card-option" value="8" onclick="cardSelect()">8</div>
-                    <div class="card-option" value="9" onclick="cardSelect()">9</div>
-                    <div class="card-option" value="10" onclick="cardSelect()">10</div>
-                    <div class="card-option" value="10" onclick="cardSelect()">J</div>
-                    <div class="card-option" value="10" onclick="cardSelect()">Q</div>
-                    <div class="card-option" value="10" onclick="cardSelect()">K</div>
-                    <div class="card-option" value="11" onclick="cardSelect()">A</div>
+                    <option class="card-option" value="2" onclick="cardSelect(this)">2</option>
+                    <option class="card-option" value="3" onclick="cardSelect(this)">3</option>
+                    <option class="card-option" value="4" onclick="cardSelect(this)">4</option>
+                    <option class="card-option" value="5" onclick="cardSelect(this)">5</option>
+                    <option class="card-option" value="6" onclick="cardSelect(this)">6</option>
+                    <option class="card-option" value="7" onclick="cardSelect(this)">7</option>
+                    <option class="card-option" value="8" onclick="cardSelect(this)">8</option>
+                    <option class="card-option" value="9" onclick="cardSelect(this)">9</option>
+                    <option class="card-option" value="10" onclick="cardSelect(this)">10</option>
+                    <option class="card-option" value="10" onclick="cardSelect(this)">J</option>
+                    <option class="card-option" value="10" onclick="cardSelect(this)">Q</option>
+                    <option class="card-option" value="10" onclick="cardSelect(this)">K</option>
+                    <option class="card-option" value="11" onclick="cardSelect(this)">A</option>
                 </div>
                 <div class="play-container dealer-container">
                     <div class="title dealer-title">
@@ -42,8 +42,11 @@
                     </div>
                     <div class="cards dealer-cards">
                         <div class="dropdown dealer-dropdown">
-                            <div class="button" onclick="showCards(event)">
-                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFFFFF" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208Zm-32-80a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path></svg>
+                            <div class="button dealer-1" onclick="showCards(event)">
+                                <option class="cardText">
+
+                                </option>
+                                <img class="plus-image" src="../assets/plus-symbol.png" display="block" width="30px" height="30px">
                             </div>
                         </div>
                     </div>
@@ -57,13 +60,19 @@
                     </div>
                     <div class="cards">
                         <div class="dropdown player-dropdown">
-                            <div class="button" onclick="showCards(event)">
-                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFFFFF" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208Zm-32-80a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path></svg>
+                            <div class="button player-1" onclick="showCards(event)">
+                                <option class="cardText">
+
+                                </option>
+                                <img class="plus-image" src="../assets/plus-symbol.png" width="30px" height="30px">
                             </div>
                         </div>
                         <div class="dropdown player-dropdown">
-                            <div class="button" onclick="showCards(event)">
-                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFFFFF" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208V208Zm-32-80a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path></svg>
+                            <div class="button player-2" onclick="showCards(event)">
+                                <option class="cardText">
+
+                                </option>
+                                <img class="plus-image" src="../assets/plus-symbol.png" width="30px" height="30px">
                             </div>
                         </div>
                     </div>
