@@ -86,7 +86,11 @@ body{
 }
 
 .player-choice-display .player-next-move{
+<<<<<<< HEAD
     font-size: 1.6em;
+=======
+    font-size: 2em;
+>>>>>>> 201dd1186d79dd24516476ba1f3696625330e48a
     font-weight: 600;
     margin: 5px;
 }
