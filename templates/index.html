@@ -10,15 +10,18 @@
     <script type="text/javascript" src="../scripts/script.js"></script>
 </head>
 <body>
-    <div class="header">
-
-    </div>
     <div class="wrapper">
         <div class="hero-container">
             <div class="title">
                 <h1>Blackjack Basic Strategy Calculator</h1>
                 <h3>Use this simple calculator to get an edge over the house</h3>
                 <p>Simply enter the dealer's card and your starting cards to decide your next move</p>
+            </div>
+            <div class="reset-hand">
+                Reset Hand
+                <button class="deal-again" onclick="resetHand()">
+                    Deal Again
+                </button>
             </div>
             <div class="display-container">
                 <div class="calculator-container">
@@ -52,9 +55,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-line">
-
-                    </div>
                     <div class="play-container player-container">
                         <div class="title player-title">
                             <p>Player</p>
@@ -79,14 +79,51 @@
                         </div>
                     </div>
                     <div class="bottom-display">
-                        <div class="player-hand-display display-box">
-                            Hand
+                        <div class="hand-display display-box">
+                            <div class="player-hand hands">
+                                <div class="player-dealer-name" style="color: green">
+                                    You
+                                </div>
+                                <div class="hand-value player-hand-value">
+                                    -
+                                </div>
+                            </div>
+                            <div class="dealer-hand hands">
+                                <div class="player-dealer-name" style = "color: red">
+                                    Dealer
+                                </div>
+                                <div class="hand-value dealer-hand-value">
+                                    -
+                                </div>
+                            </div>
                         </div>
                         <div class="player-choice-display display-box">
-                            Stand
+                            <div class="next-move-text">
+                                Your best next move is:
+                            </div>
+                            <div class="player-next-move">
+                                -
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="how-to-use">
+                <div class="how-to-title">
+                    <h3>How to use the Blackjack Calculator</h3>
+                    <p>Follow these steps to get your next move:</p>
+                    <ol>
+                        <li>Select Dealer's card space and select their card</li>
+                        <li>Select both Player's card spaces and select your cards</li>
+                        <li>Wait to see your next best move!</li>
+                        <li>Click '<i>Reset Hand</i>' to start a new hand</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="how-it-works">
+                <h4>How does Blackjack Basic Strategy work?</h4>
+                <p>If you are unfamiliar with Blackjack Basic Strategy, we suggest you watch '<b><i>Blackjack: The Expert's Guide</i></b>' by <b>Blackjack Apprenticeship</b></p>
+                <iframe class="video" src="https://www.youtube.com/embed/PljDuynF-j0" width="auto"></iframe> 
             </div>
         </div>
     </div>
