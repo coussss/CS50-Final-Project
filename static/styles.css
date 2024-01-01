@@ -2,11 +2,6 @@ body{
     margin: 0;
 }
 
-.header{
-    height: 80px;
-    background-color: grey;
-}
-
 .wrapper{
     display: flex;
     width: 100%;
@@ -15,9 +10,21 @@ body{
 
 .hero-container{
     display: flex;
-    width: 1200px;
+    width: 1000px;
     margin: 25px;
     flex-direction: column;
+}
+
+.display-container{
+    background-color: rgb(17, 8, 0);
+    height: 500px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 566px) {
+    .display-container{
+        min-height: 650px;
+    }
 }
 
 .calculator-container{
@@ -25,18 +32,20 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 400px;
     background-color: rgb(34, 119, 34);
     padding-bottom: 20px;
-    outline: 2px solid rgb(25, 70, 25);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 10px solid rgb(218, 171, 44);
 }
 
 .bottom-display{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 25px;
 }
 
 .display-box{
@@ -45,6 +54,84 @@ body{
     height: 100px;
     text-align: center;
     margin: 25px;
+}
+
+.hand-display{
+    display: flex;
+}
+
+.hand-display .hands{
+    margin: auto;
+}
+
+.hands .player-dealer-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.hands .hand-value{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.player-choice-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.player-choice-display .next-move-text{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.player-choice-display .player-next-move{
+    font-size: 2em;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.reset-hand{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 65px;
+    font-weight: 600;
+}
+
+.reset-hand button{
+    background-color: white;
+    border: 2px solid rgb(114, 114, 114);
+    font-size: 0.9em;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.how-to-use{
+    margin-top: 50px;
+}
+
+.how-to-use p{
+    margin-top: 10px;
+}
+
+.how-to-use li{
+    margin: 5px;
+    font-weight: 500;
+}
+
+.how-it-works{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.how-it-works .video{
+    aspect-ratio: 16/9;
 }
 
 /*card dropdown*/
@@ -86,6 +173,16 @@ body{
     align-items: center;
 }
 
+.dealer-container{
+    padding-top: 10px;
+    width: 400px;
+    height: 200px;
+    border: 6px solid rgba(153, 255, 153, 0.5);
+    border-top: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
 .play-container .title{
     margin-top: 10px;
 }
@@ -98,6 +195,7 @@ body{
 
 .cards{
     display: flex;
+    margin-bottom: 20px;
 }
 
 .dropdown{
@@ -136,15 +234,6 @@ body{
     margin: auto;
     font-size: 2em;
     font-weight: 600;
-}
-
-/*table line*/
-
-.table-line{
-    height: 5px;
-    background-color: rgb(25, 70, 25);
-    width: 100%;
-    margin-top: 20px;
 }
 
 /*{

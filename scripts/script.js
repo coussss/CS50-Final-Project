@@ -50,6 +50,20 @@ const strategies = {
     "split11": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
 }
 
+function resetHand() {
+    document.querySelectorAll('.plus-image').forEach((img) => {
+        img.style.display = 'block';
+    });
+    document.querySelectorAll('.cardText').forEach((text) => {
+        text.style.display = 'none';
+    });
+    document.querySelector('.player-hand-value').innerHTML = '-';
+    document.querySelector('.dealer-hand-value').innerHTML = '-';
+    document.querySelector('.player-next-move').innerHTML = '-';
+
+    cardCount = 0;
+}
+
 function calculateChoice(d1, p1, p2) {
     if (p1 == p2){
         return(strategies[`split${p1}`][d1 - 2])
@@ -71,7 +85,26 @@ function calculateChoice(d1, p1, p2) {
 }
 
 function displayChoice(choice) {
-    
+    let next_move = document.querySelector('.player-next-move')
+
+    let choice_text = null;
+    if (choice == 0) {
+        choice_text = "Hit"
+    } else if (choice == 1) {
+        choice_text = "Stand"
+    } else if (choice == 2) {
+        choice_text = "Double/Hit"
+    } else if (choice == 3) {
+        choice_text = "Double/Stand"
+    } else if (choice == 4) {
+        choice_text = "Split"
+    } else if (choice == 5) {
+        choice_text = "No Split"
+    } else if (choice == 6) {
+        choice_text = "Split/Double"
+    }
+
+    next_move.innerHTML = choice_text;
 }
 
 function showCards(event) { 
@@ -100,6 +133,8 @@ function cardSelect(val) {
     const card_select = document.querySelector('.card-list');
     let plus_image = currentSelect.querySelector('.plus-image');
     let card_text = currentSelect.querySelector('.cardText');
+    let player_hand_value = document.querySelector('.player-hand-value')
+    let dealer_hand_value = document.querySelector('.dealer-hand-value')
 
     if (window.getComputedStyle(plus_image).getPropertyValue("display") == 'block') {
         cardCount++;
@@ -112,11 +147,18 @@ function cardSelect(val) {
 
     card_select.style.display = 'none';
 
+    if(currentSelect.className == 'button player-1' || currentSelect.className == 'button player-2') {
+        player_hand_value.innerHTML = val.value;
+    } else {
+        dealer_hand_value.innerHTML = val.value;
+    }
+
     if (cardCount == 3) {
         cards = document.querySelectorAll('.cardText');
         dealer_card_1 = Number(cards[0].value);
         player_card_1 = Number(cards[1].value);
         player_card_2 = Number(cards[2].value);
+        player_hand_value.innerHTML = player_card_1 + player_card_2;
 
         let choice = calculateChoice(dealer_card_1, player_card_1, player_card_2);
 
